@@ -1,0 +1,41 @@
+<div class="card cardBoxShadow ">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+         <h5 class="card-title"> PLAN LIST </h5>
+            </div>
+            <div class="col-md-6">
+              <h5 class="card-title"> {{message}} </h5>
+                 </div>
+            <div class="col-md-2">
+                <a routerLink="/health/plan/plan_create" class="btn btn-sm btn-primary text-right">Add New Plan</a>
+            </div>
+        </div>
+  <hr>      
+<table class="table">
+    <thead>
+      <tr class="text-uppercase">
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Info</th>
+        <th scope="col">Icon</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data2; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.Name}}</td>
+        <td>{{item.Info}}</td>
+        <td><img class="rounded-circle2" src="{{basePath}}{{item.Path}}" ></td>
+        <td >
+           <a class="badge bg-success mt-2" routerLink="/health/plan/plan_update/{{item.id}}">EDIT</a>
+            &nbsp;
+            <button class="badge bg-danger mt-2" (click)="planDelete(item.id)">REMOVE</button>
+        
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

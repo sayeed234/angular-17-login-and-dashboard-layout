@@ -1,0 +1,32 @@
+<div class="card cardBoxShadow">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-10">
+   <h5 class="card-title"> CREATE PLAN  </h5>
+      </div>
+      <div class="col-md-2">
+          <a routerLink="/health/plan/plan_list" class="btn btn-sm btn-primary text-right">Plan List</a>
+      </div>
+  </div>
+<hr>
+    <div class="row">
+      <div class="form-group bg-warning">
+        {{Message}}
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Name</label>
+      <input type="text" class="form-control" required="" id="inputEmail4" placeholder="Name" [(ngModel)]="Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Description</label>
+        <input type="text" class="form-control" required="" id="Description" placeholder="Description" [(ngModel)]="Info">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Icon</label>
+      <input type="file" class="form-control" required id="inputAddress"  #file (change)="fileChange($event)">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary text-center" (click)="dataEntry()">Submit</button>
+  </div>
+  </div>

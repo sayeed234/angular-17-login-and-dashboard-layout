@@ -1,0 +1,24 @@
+<div class="container-fluid height">
+    <div class="wrapper d-flex align-items-center justify-content-center h-100">
+        <div class="card login-form">
+            <div class="card-body">
+                <h3 class="card-title text-center"><b>{{title}}</b></h3>
+                <h5 class="card-title text-center">Login</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Register Email" ng-model="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="password">
+                    </div>
+                    <button type="submit" class="btn btncolor w-100" ng-click="checkLogin()"><b>LOGIN</b></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
